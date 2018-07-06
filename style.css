@@ -1,0 +1,27 @@
+#star1{
+	width: 100px;
+	height:25px;
+	display: none;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	font-size: 20px;
+	color: pink;
+}
+#star2{
+	width: 100px;
+	height: 25px;
+	display: none;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	font-size: 20px;
+	color: blue;
+}
+
+#big{
+	width:1000px;
+	height: 1000px;
+	border:3px solid pink;
+	margin: 0 auto;
+}
