@@ -515,25 +515,31 @@ div>div.content3>div>div.fl {
             <div class="fl"></div>
         </div>
     </div>
-
-  <!--
-  	作者：offline
-  	时间：2018-08-05
-  	描述：
-  	 <a id="bofang" style="background: #f75fe0; color:#fff; border-radius:5px;width:140px;height:40px;text-align: center;display:inline-block;margin-left:400px; line-height: 40px; cursor: pointer;opacity: 0;">
-        点击再看一次
-    </a>
-
-    <a id="audio_btn" style="background: #f75fe0; color:#fff; border-radius:5px;width:140px;height:40px;text-align: center;display:inline-block;line-height: 40px; cursor: pointer;opacity: 0;">
-        点击关闭背景音乐
-    </a>
-
-  --> 
 </div>
 <audio id="music" autoplay="autoplay" loop="loop" preload="auto" src="http://www.xyptz.cn/aini.mp3">
 </audio><script>
 $(document).ready(function() {
-    animate();
+    	document.getElementById("bo").style.display="none";
+	document.getElementById("bo").style.background="white";
+	var x=prompt("","让我看看你是不是我小媳妇儿，我小媳妇儿叫啥啊！");
+	if(x=="孙璐"){
+	var y=prompt("","嗯呐，是小媳妇儿，让你进，但。。。先说你爱我！");
+	if(y=="爱你"){
+		alert("我也爱你！");
+		document.getElementById("bo").style.display="block";
+	document.getElementById("bo").style.background="url(img/3f62a32788ebd367.jpg) no-repeat";
+		 animate();
+	}else{
+		alert("你不说。。也让你进咯！");
+		document.getElementById("bo").style.display="block";
+	document.getElementById("bo").style.background="url(img/3f62a32788ebd367.jpg) no-repeat";
+		 animate();
+	}
+	
+	}else{
+		alert("答错了，不让你进去，口亨！想进刷新重新回答")
+	}
+   
 });
 
 function animate() {
