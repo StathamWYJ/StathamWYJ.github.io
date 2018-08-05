@@ -41,7 +41,7 @@ div>div.content3>div>div.fl {
 }
 </style>
 </head>
-<body>
+<body id="main">
 <div style="width: 1100px; margin: auto;">
     <p style="font-size: 40px; color: #f75fe0;text-align: center;">
         <span>璐璐</span><span>小宝贝儿</span>
@@ -519,20 +519,20 @@ div>div.content3>div>div.fl {
 <audio id="music" autoplay="autoplay" loop="loop" preload="auto" src="http://www.xyptz.cn/aini.mp3">
 </audio><script>
 $(document).ready(function() {
-    	document.getElementById("bo").style.display="none";
-	document.getElementById("bo").style.background="white";
+    	document.getElementById("main").style.display="none";
+	document.getElementById("main").style.background="white";
 	var x=prompt("","让我看看你是不是我小媳妇儿，我小媳妇儿叫啥啊！");
 	if(x=="孙璐"){
 	var y=prompt("","嗯呐，是小媳妇儿，让你进，但。。。先说你爱我！");
 	if(y=="爱你"){
 		alert("我也爱你！");
-		document.getElementById("bo").style.display="block";
-	document.getElementById("bo").style.background="#2C3437";
+		document.getElementById("main").style.display="block";
+	document.getElementById("main").style.background="#2C3437";
 		 animate();
 	}else{
 		alert("你不说。。也让你进咯！");
-		document.getElementById("bo").style.display="block";
-	document.getElementById("bo").style.background="#2C3437";
+		document.getElementById("main").style.display="block";
+	document.getElementById("main").style.background="#2C3437";
 		 animate();
 	}
 	
