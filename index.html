@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Can you?</title>
+
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+				moz-user-select: -moz-none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+				background: url(img/u=33682910,1144585952&fm=27&gp=0.jpg) no-repeat fixed;
+				background-size: cover;
+			}
+			
+			.top {
+				width: 500px;
+				height: 150px;
+				margin: 50px auto;
+				font-size: 30px;
+				color: #ea544d;
+			}
+			
+			.box {
+				width: 310px;
+				height: 310px;
+				margin: 0px auto;
+				perspective: 800px;
+				margin-top: -40px;
+			}
+			
+			.box .wrap {
+				width: 210px;
+				height: 210px;
+				position: relative;
+				transform-style: preserve-3d;
+				animation: play 10s linear infinite;
+			}
+			
+			.box .wrap ul li {
+				list-style: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			@keyframes play {
+				from {
+					transform: rotateY(0deg);
+				}
+				to {
+					transform: rotateY(360deg);
+				}
+			}
+			
+			.xin,
+			.xin1 {
+				position: absolute;
+			}
+			
+			.xin {
+				animation: xin 8s linear infinite;
+			}
+			
+			@keyframes xin {
+				0% {
+					top: 0%;
+					left: 50%;
+					opacity: 1;
+				}
+				20% {
+					top: 20%;
+					left: 80%;
+					opacity: 0;
+				}
+				40% {
+					top: 50%;
+					left: 50%;
+					opacity: 1;
+				}
+				60% {
+					top: 80%;
+					left: 40%;
+					opacity: 0;
+				}
+				80% {
+					top: 50%;
+					left: 20%;
+					opacity: 1;
+				}
+				100% {
+					top: 10%;
+					left: 0%;
+					opacity: 0;
+				}
+			}
+			
+			.xin1 {
+				animation: xin 15s linear infinite;
+			}
+			
+			@keyframes xin1 {
+				0% {
+					top: 10%;
+					right: 50%;
+					opacity: 1;
+				}
+				20% {
+					top: 50%;
+					right: 80%;
+					opacity: 0;
+				}
+				40% {
+					top: 40%;
+					right: 50%;
+					opacity: 1;
+				}
+				60% {
+					top: 60%;
+					right: 40%;
+					opacity: 0;
+				}
+				80% {
+					top: 50%;
+					right: 20%;
+					opacity: 1;
+				}
+				100% {
+					top: 0%;
+					right: 0%;
+					opacity: 0;
+				}
+			}
+			
+			.text {
+				width: 60%;
+				margin: 0 auto;
+				margin-top: -60px;
+				font-size: 20px;
+				line-height: 30px;
+				font-weight: 500;
+				animation: color 10s linear infinite;
+			}
+			
+			@keyframes color {
+				0% {
+					color: #039;
+				}
+				20% {
+					color: #9C3;
+				}
+				40% {
+					color: #6C6;
+				}
+				60% {
+					color: #66F;
+				}
+				80% {
+					color: #FC9;
+				}
+				100% {
+					color: #9FF;
+				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!--S top-->
+		<div class="top">
+			<marquee behavior="alternate">WYJ</marquee>
+		</div>
+		<!--E top-->
+
+		<!--S box-->
+		<div class="box">
+			<div class="wrap">
+
+			
+				<!-- 此处需要自己修改图片路径 -->
+
+				<ul>
+					<li><img src="img/u=1396198148,3471873371&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+					<li><img src="img/u=825581449,2523436680&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+					<li><img src="img/u=1770324266,3508818175&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+					<li><img src="img/u=1415012522,1520264792&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+					<li><img src="img/u=3961358579,1099309129&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+					<li><img src="img/u=655581459,2102227346&fm=27&gp=0.jpg" height="210px" width="210px" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="xin">
+			<img src="img/u=3501939095,1605508370&fm=27&gp=0.jpg" width="100px" height="100px" />
+		</div>
+
+		<div class="xin1">
+			<img src="img/u=825581449,2523436680&fm=27&gp=0.jpg" width="100px" height="100px" />
+		</div>
+
+		<div class="text">
+			<p id="test">123123123123</p>
+		</div>
+	
+
+		<embed src="music/iw ix - 天空之城（钢琴版）（Cover 久石让）.mp3" hidden="true" />
+		<script type="text/javascript" src="js/jq.js"></script>
+
+		<script type="text/javascript">
+			var isBlank = prompt("这周五有空吗？输入yes或no");
+			while(isBlank == "no") {
+				isBlank = prompt("这周五有空吗？输入yes或no");
+			}
+
+			$(function() {
+
+				$(".wrap ul li").each(function(i) {
+					var Deg = 360 / $(".wrap ul li").size();
+					$(this).css({
+						"transform": "rotateY(" + Deg * i + "deg) translateZ(220px)"
+					});
+
+				});
+			});
+
+			window.onload = function autoplay() {
+				var b = ['能够遇见你，对我来说是最大的幸福。有了你，我的生活变的无限宽广，有了你，世界变得如此迷人。你是世界，世界是你。我愿意用自己的心，好好的陪着你，爱着你。陪你到你想去的地方，用心走完我们人生的余下的旅程。在未来的日子里，也许什么都无法确定，但唯一可以确定的是，我爱的人是你，无论现在还是将来，我想我这里都会是你最温暖的港湾，都是为你遮风避雨的城墙。无论狂风，无论暴雨。我都会陪在你的身旁，让你不会感到丝毫的担心和惶恐。我会珍惜和你在一起的每一刻，每一分，每一秒。谁叫你是我最爱的人，谁叫你是第二幸福的人（因为爱上她你是最幸福的了，哈哈）。为了你，我愿用自己的双手为你撑起一片艳阳！'];
+				//  分隔字符串
+				var str = b.join(""),
+					i = 0,
+					arr = str.split('');
+
+				var ms_stop = setInterval(function() {
+					//  设置自动出现文字
+					if(i > str.length - 1) {
+						i = 0;
+						document.getElementById('test').innerHTML = '';
+					}
+					document.getElementById('test').innerHTML = document.getElementById('test').innerHTML + arr[i];
+					i++;
+				}, 200);
+			}
+		</script>
+	</body>
+
+</html>
