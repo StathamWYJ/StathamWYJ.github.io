@@ -234,25 +234,29 @@ document.onkeydown = function(event) {
 		newGame();
 	} else {
 		var e = event || window.event || arguments.callee.caller.arguments[0];
+		if(e.keyCode == 37) {
+			moveLeft();
+			if(isChanged()) {
+				newGridRandom();
+			}
+		} else if(e.keyCode == 38) {
+			moveUp();
+			if(isChanged()) {
+				newGridRandom();
+			}
 
-		switch(e.keyCode) {
-			case 37:
-				moveLeft();
-				break;
-			case 38:
-				moveUp();
-				break;
-			case 39:
-				moveRight();
-				break;
-			case 40:
-				moveDown();
-				break;
-		}
-		if(isChanged()) {
-			newGridRandom();
-		}
+		} else if(e.keyCode == 39) {
+			moveRight();
+			if(isChanged()) {
+				newGridRandom();
+			}
 
+		} else if(e.keyCode == 40) {
+			moveDown();
+			if(isChanged()) {
+				newGridRandom();
+			}
+		}
 	}
 	score();
 }
